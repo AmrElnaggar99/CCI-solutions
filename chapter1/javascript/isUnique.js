@@ -22,3 +22,5 @@ console.log(isUnique('abcd'), 'true');
 console.log(isUnique("yes right"), "true")
 console.log(isUnique('no not unique'), 'false');
 console.log(isUnique('notunique'), 'false');
+
+// this solution is O(n) time, O(n) space

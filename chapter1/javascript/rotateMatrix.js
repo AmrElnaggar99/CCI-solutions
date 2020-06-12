@@ -49,7 +49,7 @@ let matrix_4 = [
 ]
 
 let matrix_2 = [
-    [1],
+    [1,2],
     [3, 4]
 ]
 let matrix_1 = [

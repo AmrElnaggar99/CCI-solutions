@@ -41,7 +41,7 @@ matrix_4 = [[1, 2, 3, 10],
             [7, 8, 9, 12],
             [13, 14, 15, 16]]
 
-matrix_2 = [[1],
+matrix_2 = [[1,2],
             [3, 4]]
 matrix_1 = [[1]]
 
@@ -49,4 +49,4 @@ for line in rotateMatrix(matrix_6):
     print(line)
 
 
-# This solution should be O(nlogn) time and O(1) space
+# This solution should be O(n^2) time and O(1) space

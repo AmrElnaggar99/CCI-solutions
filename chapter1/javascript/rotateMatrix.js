@@ -49,7 +49,7 @@ let matrix_4 = [
 ]
 
 let matrix_2 = [
-    [1],
+    [1,2],
     [3, 4]
 ]
 let matrix_1 = [
@@ -59,4 +59,4 @@ let matrix_1 = [
 
 console.log(rotateMatrix(matrix_6))
 
-// This solution should be O(nlogn) time and O(1) space
+// This solution should be O(n^2) time and O(1) space

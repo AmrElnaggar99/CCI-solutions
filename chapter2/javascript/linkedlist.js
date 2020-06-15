@@ -34,7 +34,7 @@ class LinkedList {
     append(val) {
         let node = new Node(val);
         // if it's an empty list
-        if (!this.head) {
+        if (!this.head || !this.tail) {
             this.head = node;
             this.tail = node;
         } else {
@@ -46,8 +46,14 @@ class LinkedList {
 
     prepend(val) {
         let node = new Node(val);
-        node.next = this.head;
-        this.head = node;
+        // if it's an empty list
+        if (!this.head || !this.tail) {
+            this.head = node;
+            this.tail = node;
+        } else {
+            node.next = this.head;
+            this.head = node;
+        }
         this.size++;
     }
 

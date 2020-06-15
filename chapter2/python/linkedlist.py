@@ -29,7 +29,7 @@ class LinkedList:
     def append(self, val):
         node = Node(val)
         # if it's an empty list
-        if not self.head:
+        if not self.head or not self.tail:
             self.head = node
             self.tail = node
         else:
@@ -39,8 +39,13 @@ class LinkedList:
 
     def prepend(self, val):
         node = Node(val)
-        node.next = self.head
-        self.head = node
+        # if it's an empty list
+        if not self.head or not self.tail:
+            self.head = node
+            self.tail = node
+        else:
+            node.next = self.head
+            self.head = node
         self.size += 1
 
     def remove(self, index):

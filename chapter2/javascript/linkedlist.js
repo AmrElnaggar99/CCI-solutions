@@ -12,6 +12,19 @@ class LinkedList {
         this.size = 0;
     }
 
+    reverse_list() {
+        let prev = None;
+        let curr = this.head;
+        while (curr != null) {
+            let nxt = curr.next;
+            curr.next = prev;
+            prev = curr;
+            curr = nxt;
+        }
+        this.head = prev;
+    }
+
+
     printList() {
         let node = this.head;
         let res = "";

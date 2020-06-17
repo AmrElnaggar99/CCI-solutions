@@ -56,7 +56,16 @@ class LinkedList {
         }
         this.size++;
     }
-
+    appendNode(node) {
+        if (!this.head || !this.tail) {
+            this.head = node;
+            this.tail = node;
+        } else {
+            this.tail.next = node;
+            this.tail = node;
+        }
+        this.size++;
+    }
     prepend(val) {
         let node = new Node(val);
         // if it's an empty list

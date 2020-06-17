@@ -58,6 +58,15 @@ class LinkedList:
             self.head = node
         self.size += 1
 
+    def appendNode(self, node):
+        if not self.head or not self.tail:
+            self.head = node
+            self.tail = node
+        else:
+            self.tail.next = node
+            self.tail = node
+        self.size += 1
+
     def remove(self, index):
         if index == 0:
             self.head = self.head.next

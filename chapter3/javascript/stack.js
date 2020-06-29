@@ -1,30 +1,33 @@
 class Stack {
     constructor() {
-        this.values = [];
+        this.items = [];
     }
 
     size() {
-        return this.values.length;
+        return this.items.length;
     }
 
     isEmpty() {
-        return this.values.length === 0;
+        return this.items.length === 0;
     }
 
     push(val) {
-        this.values.push(val);
+        this.items.push(val);
     }
 
     pop() {
-        return this.values.pop();
+        if (this.size() == 0) {
+            return null;
+        }
+        return this.items.pop();
     }
 
     top() {
-        return this.values[this.values.length - 1];
+        return this.items[this.items.length - 1];
     }
 
     toArray() {
-        return this.values;
+        return this.items;
     }
 }
 module.exports = Stack;

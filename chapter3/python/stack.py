@@ -5,6 +5,12 @@ class Stack:
     def __init__(self):
         self.items = []
 
+    def peek(self):
+        if self.size() == 0:
+            return
+        else:
+            return self.items[-1]
+
     def size(self):
         return len(self.items)
 

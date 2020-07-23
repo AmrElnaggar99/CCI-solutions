@@ -21,7 +21,12 @@ class Stack {
         }
         return this.items.pop();
     }
-
+    peek() {
+        if (this.isEmpty()) {
+            return null;
+        }
+        return this.items[this.items.length - 1];
+    }
     top() {
         return this.items[this.items.length - 1];
     }
